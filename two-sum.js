@@ -2,7 +2,7 @@ var twoSum = function (nums, target) {
   let s = new Set();
 
   for (let i = 0; i < nums.length; ++i) {
-    //this assignes a temp number to see what the total is when you subtract the target number and the number in the array. we will check temp against each number in the new set below.
+    //this assigns a temp number to see what the total is when you subtract the target number and the number in the array. we will check temp against each number in the new set below.
     let temp = target - nums[i];
     console.log(temp);
 
@@ -33,3 +33,4 @@ var twoSum = function (nums, target) {
 };
 
 twoSum([2, 7, 11, 15], 9);
+//expected output: [0, 1]
