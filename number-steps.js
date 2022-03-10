@@ -1,4 +1,4 @@
-// use the fibonacci sequence to find all the total number of distinct possibilities. 
+// use the fibonacci sequence to find all the total number of distinct possibilities.
 
 // you must use memoization which is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls.
 
@@ -16,3 +16,24 @@ var climbStairs = function (n, memo) {
 };
 
 climbStairs(50);
+
+//while loop has even less time complexity
+
+function fibonacci(num) {
+  var a = 1,
+    b = 0,
+    temp;
+
+  while (num >= 0) {
+    temp = a;
+    a = a + b;
+    b = temp;
+    num--;
+    //temp cotinues to rise as the last two numbers in the sequence are added.
+    console.log(a);
+  }
+  console.log(b);
+  return b;
+}
+
+fibonacci(20);
