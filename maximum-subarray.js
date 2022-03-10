@@ -11,12 +11,12 @@ var maxSubArray = function (nums) {
 
   for (var i = 0; i < nums.length; i++) {
     max_ending_here = max_ending_here + nums[i];
-    console.log(nums[i])
+    console.log(max_so_far);
     if (max_so_far < max_ending_here) max_so_far = max_ending_here;
-
+    console.log(max_so_far);
     if (max_ending_here < 0) max_ending_here = 0;
   }
-  console.log(max_so_far);
+  // console.log(max_so_far);
   return max_so_far;
 };
 
