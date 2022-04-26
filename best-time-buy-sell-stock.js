@@ -2,17 +2,23 @@
  * @param {number[]} prices
  * @return {number}
  */
+
 var maxProfit = function (prices) {
-  console.log(prices);
-  //find smallest number
-  smallestPrice = Math.min(...prices);
-  //seperate into smaller chunck
-  newarray = prices.splice(smallestPrice);
-  //get biggest number
-  largestNumber = Math.max(...newarray);
-  //get profit
-  profit = largestNumber - smallestPrice;
-  return profit;
+  if (!prices) return 0;
+  let maxProf = 0;
+  let minPrice = prices[0];
+  for (i in prices) {
+    if (prices[i] < minPrice) {
+      minPrice = prices[i];
+      console.log(minPrice);
+    }
+    maxProf = Math.max(maxProf, prices[i] - minPrice);
+  }
+  if (maxProf > 0) {
+    return maxProf;
+  } else {
+    return 0;
+  }
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
