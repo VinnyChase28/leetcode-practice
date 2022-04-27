@@ -10,15 +10,11 @@ var maxProfit = function (prices) {
   for (i in prices) {
     if (prices[i] < minPrice) {
       minPrice = prices[i];
-      console.log(minPrice);
     }
     maxProf = Math.max(maxProf, prices[i] - minPrice);
   }
-  if (maxProf > 0) {
-    return maxProf;
-  } else {
-    return 0;
-  }
+  if (maxProf > 0) return maxProf;
+  else return 0;
 };
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
